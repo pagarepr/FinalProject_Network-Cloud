@@ -1,0 +1,27 @@
+extends ../base
+
+block content
+  h3 #{action} your Advertisement
+  form(method="POST")
+    .form-group
+      label(for="title") Item
+      input.form-control(type="text", name="title", id="title", value=ad.title)
+    .form-group
+      label(for="author") Owner
+      input.form-control(type="text", name="author", id="author", value=ad.author)
+    .form-group
+      label(for="publishedDate") Date Published
+      input.form-control(type="text", name="publishedDate", id="publishedDate", value=ad.publishedDate)
+    .form-group
+      label(for="description") Description
+      input.form-control(type="text", name="description", id="description", value=ad.description)
+    .form-group
+      label(for="image") Image
+      input.form-control(type="file", name="image", id="image")
+    .form-group.hidden
+      label(for="imageUrl") Image URL
+      input.form-control(type="text", name="imageUrl", id="imageUrl", value=ad.imageUrl)
+    .form-group
+    button.btn.btn-success(type="submit") Save
+
+// [END form]

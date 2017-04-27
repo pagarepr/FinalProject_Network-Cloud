@@ -1,0 +1,47 @@
+{
+  "name": "advertisement",
+  "version": "1.0.0",
+  "description": "Advertisement platform",
+  "repository": "",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "cover": "nyc --cache npm test; nyc report --reporter=html"
+  },
+  "author": "Priyanka Pagare",
+  "license": "Apache-2.0",
+  "semistandard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "~1.0.0",
+    "@google-cloud/storage": "~1.1.0",
+    "body-parser": "~1.17.1",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "lodash": "~4.17.4",
+    "mongod": "^2.0.0",
+    "mongodb": "~2.2.25",
+    "multer": "~1.3.0",
+    "mysql": "~2.13.0",
+    "nconf": "^0.8.4",
+    "prompt": "~1.0.0"
+  },
+  "devDependencies": {
+    "ava": "~0.19.1",
+    "nodejs-repo-tools": "git+https://git@github.com/GoogleCloudPlatform/nodejs-repo-tools.git",
+    "proxyquire": "~1.7.11",
+    "sinon": "~2.1.0",
+    "tap-dot": "~1.0.5"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  }
+}

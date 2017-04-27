@@ -1,0 +1,26 @@
+extends ../base
+
+block content
+  h3 Advertisement
+
+  a(href="/ads/add", class='btn btn-success btn-sm')
+    i.glyphicon.glyphicon-plus
+    span  Add Advertisement
+
+  each ad in ads
+    .media
+      a(href="/ads/#{ad.id}")
+        .media-left
+            img(src=ad.imageUrl || "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg", style="width:50px;height:50px")
+        .media-body
+          h4= ad.title
+          p= ad.author
+
+  if !ads.length
+    p No advertisements available.
+
+  if nextPageToken
+    nav
+      ul.pager
+        li
+          a(href="?pageToken=#{encodeURIComponent(nextPageToken)}") More
