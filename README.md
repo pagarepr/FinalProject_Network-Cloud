@@ -20,3 +20,4 @@
 - ads folder contains the js files for db logic and actions logic
 - views contain the front end components
 - package.json defines libraries to install using npm
+- details.pdf describing details, steps and configurations
